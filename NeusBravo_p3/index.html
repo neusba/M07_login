@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserción de datos en una BBDD</title>
+</head>
+<body>
+    <!-- Craemos el formulario -->
+    <form method="POST" action="conexion.php">
+        <div>
+            <label>ID</label><br>
+            <input type="number" name="id">
+        </div>
+        <div>
+            <label>Rol</label><br>
+            <input type="enum" name="rol">
+        </div>
+        <div>
+            <label>Name</label><br>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label>Surname</label><br>
+            <input type="text" name="surname">
+        </div>
+        <div>
+            <label>Password</label><br>
+            <input type="text" name="password">
+        </div>
+        <div>
+            <label>Email</label><br>
+            <input type="text" name="email">
+        </div>
+        <div>
+            <label>Active</label><br>
+             <input type="checkbox" id="acepto" name="acepto" value="true">
+        </div>
+        <input type="submit" value="Submit">
+     </form>
+</body>
+</html>
