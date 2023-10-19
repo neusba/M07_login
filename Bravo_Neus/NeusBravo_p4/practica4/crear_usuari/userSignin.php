@@ -23,6 +23,8 @@
 
     if($respuestaSignin) {
         echo "Datos registrados correctamente";
+        header("Location: ../views/login.php?insercion=1");
+        exit;
     } else {
         echo "No ha sido posible registrar al usuario";
     }

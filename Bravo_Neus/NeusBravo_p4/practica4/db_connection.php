@@ -1,20 +1,11 @@
 <?php
-    // Datos para conectar la BBDD
-    $db_host = "localhost";
-    $db_nombre = "Users";
-    $db_usuario = "root";
-    $db_password = "";
+    include("dbConf.php");  // Constantes de conexión
 
-    // Conectamos la base de datos
-
-    // TODO: TRY CATCH {}
-    // ###################################################################
-    
-    $conexion = new mysqli($db_host, $db_usuario, $db_password, $db_nombre);
-    if (!$conexion) {
-        echo "Error: No se pudo conectar a MySQL.";
+    // Conectamos la base de datos con un try catch
+    try {
+        $conexion = new mysqli($db_host, $db_usuario, $db_password, $db_nombre);
+    } catch (Exception) {
+        echo "Error: No se pudo conectar a MySQL. ";
         exit;
-    } else {
-        echo "Conexión exitosa a MYSQL";
     }
 ?>

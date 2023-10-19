@@ -11,20 +11,7 @@
     
     // Hacemos la query a la BBDD con la consulta previamente creada
     $respuestaLogin = $conexion->query($sqlLogin);
-
-
-    if($respuestaLogin) {   // Mostrar resultado en archivo php aparte
-        // ALUMNO
-            // nom
-            // cognom
-            // email
-        // PROFE
-            // nom
-            // cognom
-            // todos los usuarios de la bbddd
-        echo "Usuario encontrado";
-    } else {
-        echo "Usuario no encontrado";
-    }
+    $respuestaFormat = $respuestaLogin->fetch_assoc();
+?>
 
 
