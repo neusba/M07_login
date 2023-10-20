@@ -1,18 +1,27 @@
 # ACTIVITAT
-- A través d’un formulari en php (amb totes les etiquetes html en format DOCTYPE) afegir les dades d’usuaris (alumnat i professorat) utilitzant el mètode procedimental.
-    - A phpmyadmin, crear una BBDD de nom Users i la taula de nom user.
-    - A la taula user, afegir dades d’alumnat i professorat des d’un programa en php connectant-se a la BBDD Users.
+Després de desenvolupar la pàgina SignIn (per crear usuaris) haurem de desenvolupar la pàgina del login. 
+Haurem de fer:
 
-Dades alumnat/professorat que han d’estar al formulari:
-- id (PK INT)
-- rol (alumnat, professorat) (ENUM)
-- name (VARCHAR, 255)
-- surname (VARCHAR, 255)
-- password (VARCHAR, 255)
-- email (VARCHAR, 255)
-- active (si l’usuari té la compte activa o bloquejada) (BOOL)
+## Un fitxer html pel login:
+    * Serà un formulari amb el mail i el password. 
+    * Ha de tenir un checkbox “Remember me”.
+    * El formulari haurà de fer servir el mètode POST.
+    * La pàgina tindrà un enllaç per poder crear un usuari (pàgina de la pràctica anterior).
+    * Totes les pàgines de la pràctica anterior hauran de tenir un enllaç per anar a login.html.
 
-**(La part de frontend no ha de ser complexa. Es recomana utilitzar una plantilla de [getbootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/))**
+## Un fitxer php per validar l'usuari i contrasenya a les bases de dades
+Consultarà la informació introduïda a la pàgina de login per comprovar si l’usuari i el password coincideixen amb un registre de les BBDD:
+    * El tractament serà:
+        - Si la consulta retorna un resultat:
+            * Si el rol és estudiant; mostrarà per pantalla: el nom, cognom, email
+            * Si el rol és professor, mostrarà el nom i cognom del professor i mostrarà la informació de tots els usuaris de les BBDD.
+        - En el cas de que no sigui correcte:
+            * Tornarà a la pàgina de login i apareixerà un error de "Login incorrecte".
+    
+    * Haureu de crear i fer servir una funció per fer la consulta de tots els usuaris quan el rol és professor.
+    * Les constants de la connexió s'haurà de fer servir a través d’un fitxer extern dbConf.php
+    * S’haurà de fer servir el try, catch en l’arxiu de connexió.
+    * Les vistes (del la pàgina login, la pàgina inserció de dades i la pàgina de mostra de dades) s’hauran de posar en una carpeta de nom vistes.
 
-**RESPOSTA EXECUCIÓ**
+
 
