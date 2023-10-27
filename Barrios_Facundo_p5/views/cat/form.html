@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P4 Barrios Facundo P4</title>
+</head>
+<body>
+    <form method="POST" action="../creacion/form_ca.php">
+        <div>
+            <label>Nom:</label><br>
+            <input type="text" name="name">
+        </div>
+        <div>
+            <label>Cognom:</label><br>
+            <input type="text" name="surname">
+        </div>
+        <div>
+            <label>Contrasenya:</label><br>
+            <input type="text" name="password">
+        </div>
+        <div>
+            <label>Email:</label><br>
+            <input type="text" name="email">
+        </div>
+        <div>
+            <label>Rol:</label><br>
+            <select name="rol">
+                <option value="alumnat">alumnat</option>
+                <option value="professorat">professorat</option>
+            </select>
+        </div>
+        <div>
+            <label>Actiu:</label><br>
+            <select name="active">
+                <option value="1">Si</option>
+                <option value="0">No</option>
+            </select>
+        </div>
+        
+        <input type="submit" name="send" value="Enviar">
+    </form>
+    <a href="login.html">Log In</a>
+     
+</body>
+</html>
