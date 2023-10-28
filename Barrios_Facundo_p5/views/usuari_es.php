@@ -1,32 +1,22 @@
 <?php
 
-    include_once '../../login/userLogin.php'; // PASAR TODO A UNA SOLA CARPETA VIEWS
+    include_once ('../login/userLogin.php'); // PASAR TODO A UNA SOLA CARPETA VIEWS
 
     $user = array();
 
     if (empty($_POST['email']) || empty($_POST['password'])) {
-        include "../esp/login.html";
-        echo "Login incorrecto"; 
+        include "login_es.html";
+        echo "Inicio de sesión incorrecto"; 
         return;
     }
 
     $email = $_POST['email'];
     $password = $_POST['password'];
-
-
-
-    echo ("email=".$email."  "."pass=".$password);
-    print_r($conn);
-
-
-
-    
     $user = consulta($email, $password);
-    print_r($user);     //AQUI PETA
 
     if (null == $user) { 
-        include "../esp/login.html";
-        echo "Login incorrecto"; 
+        include "login_es.html";
+        echo "Inicio de sesión incorrecto"; 
         return;
     }
     
@@ -40,7 +30,7 @@
     <p>Nombre: <?= $user['name'];?></p>
     <p>Apellido: <?= $user['surname'];?></p>
     <p>Email: <?= $user['email'];?></p>
-    <a href="login.html">Cerrar sesión</a>
+    <a href="login_es.html">Cerrar sesión</a>
     <?php
     } else {
     ?>
@@ -50,5 +40,5 @@
         foreach ($lista as $usuario) {
             echo "<p>Nombre y apellido: ${usuario['name']} ${usuario['surname']}</p>";
         }
-        echo "<a href=\"login.html\">Cerrar sesión</a>";
+        echo "<a href=\"login_es.html\">Cerrar sesión</a>";
     }
