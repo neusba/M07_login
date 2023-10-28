@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Imágenes banderas */
+.flag {
+    width: 3vw;
+    border-radius: 40%;
+    padding: 3em;
+    border: 2px solid black;
+}
+.eligeBandera { 
+    display: flex;
+    justify-content: space-between; width: 30vw;
+    padding: 3em;
+}
