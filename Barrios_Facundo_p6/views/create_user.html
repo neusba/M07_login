@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P3 Barrios Facundo</title>
+    <title>P4 Barrios Facundo P4</title>
 </head>
 <body>
-    <form method="POST" action="index.php">
+    <form method="POST" action="../creacion/index.php">
         <div>
             <label>Name:</label><br>
             <input type="text" name="name">
@@ -26,17 +26,21 @@
         <div>
             <label>Rol:</label><br>
             <select name="rol">
-                <option value="alumnat" selected>alumnat</option>
+                <option value="alumnat">alumnat</option>
                 <option value="professorat">professorat</option>
             </select>
         </div>
         <div>
             <label>Active:</label><br>
-            <input type="number" name="rol">
+            <select name="active">
+                <option value="1">Si</option>
+                <option value="0">No</option>
+            </select>
         </div>
         
-        <input type="submit" value="Submit">
-     </form>
+        <input type="submit" name="send" value="Enviar">
+    </form>
+    <a href="index.html">Log In</a>
      
 </body>
 </html>
