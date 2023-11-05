@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(209, 175, 226);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.formIndex, .formLogin {
+    background-color: rgb(253, 253, 253);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    border-radius: 20px;
+    padding: 2em;
+    height: 35vh;
+}
+.formLogin {
+    height: 25vh;
+}
+input, select {
+    margin: 0.3vh;
+}
+label {
+    font-weight: bold;
+}
+.acceso {
+    margin-top: 1vh;
+    display: flex;
+    justify-content: space-between;
+}
+a {
+    color: blue;
+}
+#mensaje {
+    color: red;
+}

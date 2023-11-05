@@ -9,7 +9,7 @@
 <body>
     <div class="formLogin">
         <!-- Craemos el formulario de Login de usuarios-->
-        <form method="POST" action="welcome.php">
+        <form method="POST" action="../session/authenticate.php">
             <h1>Log in</h1>
             <div>
                 <label>Email</label><br>
@@ -22,9 +22,10 @@
             <input type="checkbox" value="Remember">Remember me<br>
             <div class="acceso">
                 <input type="submit" value="Submit">
+                <a href="index.php">Sign in</a>
             </div>
             <!-- Mensaje por si el login es incorrecto -->
-            <!-- <?php
+            <?php
                 $muestraErrorLogin = false;
                 $muestraInsercionCorrecta = false;
 
@@ -40,7 +41,7 @@
             <?php endif; ?>
             <?php if ($muestraInsercionCorrecta) : ?>
                 <p>Registro realizado con éxito</p>
-            <?php endif; ?> -->
+            <?php endif; ?>
         </form>
     </div>
 </body>
